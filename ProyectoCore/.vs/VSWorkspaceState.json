@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Aplicacion",
+    "\\Aplicacion\\Cursos",
+    "\\Aplicacion\\ManejadorError",
+    "\\Dominio",
+    "\\Persistencia",
+    "\\WebAPI",
+    "\\WebAPI\\Controllers",
+    "\\WebAPI\\Middleware"
+  ],
+  "SelectedNode": "\\WebAPI\\Startup.cs",
+  "PreviewInSolutionExplorer": false
+}

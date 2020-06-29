@@ -1,0 +1,14 @@
+C:\Users\pmuru\source\repos\ProyectoCore\Aplicacion\bin\Debug\netstandard2.0\Aplicacion.deps.json
+C:\Users\pmuru\source\repos\ProyectoCore\Aplicacion\bin\Debug\netstandard2.0\Aplicacion.dll
+C:\Users\pmuru\source\repos\ProyectoCore\Aplicacion\bin\Debug\netstandard2.0\Aplicacion.pdb
+C:\Users\pmuru\source\repos\ProyectoCore\Aplicacion\bin\Debug\netstandard2.0\Dominio.dll
+C:\Users\pmuru\source\repos\ProyectoCore\Aplicacion\bin\Debug\netstandard2.0\Persistencia.dll
+C:\Users\pmuru\source\repos\ProyectoCore\Aplicacion\bin\Debug\netstandard2.0\Dominio.pdb
+C:\Users\pmuru\source\repos\ProyectoCore\Aplicacion\bin\Debug\netstandard2.0\Persistencia.pdb
+C:\Users\pmuru\source\repos\ProyectoCore\Aplicacion\obj\Debug\netstandard2.0\Aplicacion.csprojAssemblyReference.cache
+C:\Users\pmuru\source\repos\ProyectoCore\Aplicacion\obj\Debug\netstandard2.0\Aplicacion.csproj.CoreCompileInputs.cache
+C:\Users\pmuru\source\repos\ProyectoCore\Aplicacion\obj\Debug\netstandard2.0\Aplicacion.AssemblyInfoInputs.cache
+C:\Users\pmuru\source\repos\ProyectoCore\Aplicacion\obj\Debug\netstandard2.0\Aplicacion.AssemblyInfo.cs
+C:\Users\pmuru\source\repos\ProyectoCore\Aplicacion\obj\Debug\netstandard2.0\Aplicacion.csproj.CopyComplete
+C:\Users\pmuru\source\repos\ProyectoCore\Aplicacion\obj\Debug\netstandard2.0\Aplicacion.dll
+C:\Users\pmuru\source\repos\ProyectoCore\Aplicacion\obj\Debug\netstandard2.0\Aplicacion.pdb
