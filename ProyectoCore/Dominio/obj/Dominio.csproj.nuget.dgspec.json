@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\pmuru\\source\\repos\\ProyectoCore\\Dominio\\Dominio.csproj": {}
+    "C:\\Users\\pmuru\\source\\repos\\RedOwlCursos\\ProyectoCore\\Dominio\\Dominio.csproj": {}
   },
   "projects": {
-    "C:\\Users\\pmuru\\source\\repos\\ProyectoCore\\Dominio\\Dominio.csproj": {
+    "C:\\Users\\pmuru\\source\\repos\\RedOwlCursos\\ProyectoCore\\Dominio\\Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pmuru\\source\\repos\\ProyectoCore\\Dominio\\Dominio.csproj",
+        "projectUniqueName": "C:\\Users\\pmuru\\source\\repos\\RedOwlCursos\\ProyectoCore\\Dominio\\Dominio.csproj",
         "projectName": "Dominio",
-        "projectPath": "C:\\Users\\pmuru\\source\\repos\\ProyectoCore\\Dominio\\Dominio.csproj",
+        "projectPath": "C:\\Users\\pmuru\\source\\repos\\RedOwlCursos\\ProyectoCore\\Dominio\\Dominio.csproj",
         "packagesPath": "C:\\Users\\pmuru\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pmuru\\source\\repos\\ProyectoCore\\Dominio\\obj\\",
+        "outputPath": "C:\\Users\\pmuru\\source\\repos\\RedOwlCursos\\ProyectoCore\\Dominio\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

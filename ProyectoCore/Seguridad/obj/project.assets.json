@@ -1378,6 +1378,25 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "Aplicacion/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Dominio": "1.0.0",
+          "FluentValidation.AspNetCore": "8.6.2",
+          "MediatR.Extensions.Microsoft.DependencyInjection": "8.0.0",
+          "Persistencia": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Aplicacion.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Aplicacion.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "Dominio/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
@@ -5184,6 +5203,11 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
+    "Aplicacion/1.0.0": {
+      "type": "project",
+      "path": "../Aplicacion/Aplicacion.csproj",
+      "msbuildProject": "../Aplicacion/Aplicacion.csproj"
+    },
     "Dominio/1.0.0": {
       "type": "project",
       "path": "../Dominio/Dominio.csproj",
@@ -5197,10 +5221,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "Dominio >= 1.0.0",
-      "FluentValidation.AspNetCore >= 8.6.2",
-      "MediatR.Extensions.Microsoft.DependencyInjection >= 8.0.0",
-      "Persistencia >= 1.0.0"
+      "Aplicacion >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -5210,11 +5231,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pmuru\\source\\repos\\RedOwlCursos\\ProyectoCore\\Aplicacion\\Aplicacion.csproj",
-      "projectName": "Aplicacion",
-      "projectPath": "C:\\Users\\pmuru\\source\\repos\\RedOwlCursos\\ProyectoCore\\Aplicacion\\Aplicacion.csproj",
+      "projectUniqueName": "C:\\Users\\pmuru\\source\\repos\\RedOwlCursos\\ProyectoCore\\Seguridad\\Seguridad.csproj",
+      "projectName": "Seguridad",
+      "projectPath": "C:\\Users\\pmuru\\source\\repos\\RedOwlCursos\\ProyectoCore\\Seguridad\\Seguridad.csproj",
       "packagesPath": "C:\\Users\\pmuru\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pmuru\\source\\repos\\RedOwlCursos\\ProyectoCore\\Aplicacion\\obj\\",
+      "outputPath": "C:\\Users\\pmuru\\source\\repos\\RedOwlCursos\\ProyectoCore\\Seguridad\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -5233,11 +5254,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\pmuru\\source\\repos\\RedOwlCursos\\ProyectoCore\\Dominio\\Dominio.csproj": {
-              "projectPath": "C:\\Users\\pmuru\\source\\repos\\RedOwlCursos\\ProyectoCore\\Dominio\\Dominio.csproj"
-            },
-            "C:\\Users\\pmuru\\source\\repos\\RedOwlCursos\\ProyectoCore\\Persistencia\\Persistencia.csproj": {
-              "projectPath": "C:\\Users\\pmuru\\source\\repos\\RedOwlCursos\\ProyectoCore\\Persistencia\\Persistencia.csproj"
+            "C:\\Users\\pmuru\\source\\repos\\RedOwlCursos\\ProyectoCore\\Aplicacion\\Aplicacion.csproj": {
+              "projectPath": "C:\\Users\\pmuru\\source\\repos\\RedOwlCursos\\ProyectoCore\\Aplicacion\\Aplicacion.csproj"
             }
           }
         }
@@ -5250,16 +5268,6 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
-        "dependencies": {
-          "FluentValidation.AspNetCore": {
-            "target": "Package",
-            "version": "[8.6.2, )"
-          },
-          "MediatR.Extensions.Microsoft.DependencyInjection": {
-            "target": "Package",
-            "version": "[8.0.0, )"
-          }
-        },
         "imports": [
           "net461",
           "net462",

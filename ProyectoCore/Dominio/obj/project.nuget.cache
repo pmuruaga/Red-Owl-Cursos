@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kGv+M9rpLkfKlzEJ6Ny8x/XMiSoVhRdKntC1pNWhyKzjRemLHLAqMFO7YLlTVShW8S4xbV09HQARnRJgiql1RQ==",
+  "dgSpecHash": "HeWqQu9StJfzbyvkFb0bSagxGffSdxei50GSaG/PHGn6WJOtxCvsZfOitYbBl+UY43ExOMXrJ8z/aEpmVJySaA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\pmuru\\source\\repos\\ProyectoCore\\Dominio\\Dominio.csproj",
+  "projectFilePath": "C:\\Users\\pmuru\\source\\repos\\RedOwlCursos\\ProyectoCore\\Dominio\\Dominio.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pmuru\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.1\\microsoft.aspnetcore.cryptography.internal.3.1.1.nupkg.sha512",
     "C:\\Users\\pmuru\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\3.1.1\\microsoft.aspnetcore.cryptography.keyderivation.3.1.1.nupkg.sha512",

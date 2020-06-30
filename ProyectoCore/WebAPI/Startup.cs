@@ -20,6 +20,8 @@ using Dominio;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.AspNetCore.Authentication;
+using Aplicacion.Contratos;
+using Seguridad.TokenSeguridad;
 
 namespace WebAPI
 {
@@ -53,6 +55,10 @@ namespace WebAPI
 
             //
             services.TryAddSingleton<ISystemClock, SystemClock>();
+
+            //Agrego el servicio del generador de token para jwt
+            //Haciendo esta inyection de servicios webapi para poder ingresar a los servicios del generador de token.
+            services.AddScoped<IJwtGenerador, JwtGenerador>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

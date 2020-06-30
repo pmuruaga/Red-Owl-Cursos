@@ -1456,6 +1456,22 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "Seguridad/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Aplicacion": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Seguridad.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Seguridad.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       }
     }
   },
@@ -5290,13 +5306,19 @@
       "type": "project",
       "path": "../Persistencia/Persistencia.csproj",
       "msbuildProject": "../Persistencia/Persistencia.csproj"
+    },
+    "Seguridad/1.0.0": {
+      "type": "project",
+      "path": "../Seguridad/Seguridad.csproj",
+      "msbuildProject": "../Seguridad/Seguridad.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "Aplicacion >= 1.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 3.1.1",
-      "Newtonsoft.Json >= 12.0.3"
+      "Newtonsoft.Json >= 12.0.3",
+      "Seguridad >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -5306,11 +5328,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pmuru\\source\\repos\\ProyectoCore\\WebAPI\\WebAPI.csproj",
+      "projectUniqueName": "C:\\Users\\pmuru\\source\\repos\\RedOwlCursos\\ProyectoCore\\WebAPI\\WebAPI.csproj",
       "projectName": "WebAPI",
-      "projectPath": "C:\\Users\\pmuru\\source\\repos\\ProyectoCore\\WebAPI\\WebAPI.csproj",
+      "projectPath": "C:\\Users\\pmuru\\source\\repos\\RedOwlCursos\\ProyectoCore\\WebAPI\\WebAPI.csproj",
       "packagesPath": "C:\\Users\\pmuru\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pmuru\\source\\repos\\ProyectoCore\\WebAPI\\obj\\",
+      "outputPath": "C:\\Users\\pmuru\\source\\repos\\RedOwlCursos\\ProyectoCore\\WebAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -5329,8 +5351,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\pmuru\\source\\repos\\ProyectoCore\\Aplicacion\\Aplicacion.csproj": {
-              "projectPath": "C:\\Users\\pmuru\\source\\repos\\ProyectoCore\\Aplicacion\\Aplicacion.csproj"
+            "C:\\Users\\pmuru\\source\\repos\\RedOwlCursos\\ProyectoCore\\Aplicacion\\Aplicacion.csproj": {
+              "projectPath": "C:\\Users\\pmuru\\source\\repos\\RedOwlCursos\\ProyectoCore\\Aplicacion\\Aplicacion.csproj"
+            },
+            "C:\\Users\\pmuru\\source\\repos\\RedOwlCursos\\ProyectoCore\\Seguridad\\Seguridad.csproj": {
+              "projectPath": "C:\\Users\\pmuru\\source\\repos\\RedOwlCursos\\ProyectoCore\\Seguridad\\Seguridad.csproj"
             }
           }
         }

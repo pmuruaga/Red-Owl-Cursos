@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qAZquy3cGuHSddlEriPu+d+uvq9RzwI1XvBd6zez6jhzjMiKCGghIqWUa7SGiYF6ywXhRN1WnffKyTxfVEHF4w==",
+  "dgSpecHash": "I0GuSjjcHNvfezRnEuW5SI8/Of77tTMZgKa0qyFxW11kB2tb3RGK7SgYR+LmteMc2qrpYD1T3vI9W9ref1Hbkg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\pmuru\\source\\repos\\ProyectoCore\\Aplicacion\\Aplicacion.csproj",
+  "projectFilePath": "C:\\Users\\pmuru\\source\\repos\\RedOwlCursos\\ProyectoCore\\Aplicacion\\Aplicacion.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pmuru\\.nuget\\packages\\fluentvalidation\\8.6.2\\fluentvalidation.8.6.2.nupkg.sha512",
     "C:\\Users\\pmuru\\.nuget\\packages\\fluentvalidation.aspnetcore\\8.6.2\\fluentvalidation.aspnetcore.8.6.2.nupkg.sha512",
