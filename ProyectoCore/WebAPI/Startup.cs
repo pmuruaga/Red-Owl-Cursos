@@ -22,6 +22,9 @@ using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.AspNetCore.Authentication;
 using Aplicacion.Contratos;
 using Seguridad.TokenSeguridad;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 namespace WebAPI
 {
@@ -56,6 +59,21 @@ namespace WebAPI
             //
             services.TryAddSingleton<ISystemClock, SystemClock>();
 
+            //Agrego la seguridad, para que no me deje consumir los controllers si no tengo un token.
+            //Ademas agregar en el configure que uso autentication
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("Mi palabra secreta"));
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(opt => {
+                //Aqui puedo indicar de donde acepto el token/las llamadas por ejemplo. Restricciones de url/dns.
+                opt.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuerSigningKey = true,
+                    IssuerSigningKey = key,
+                    ValidateAudience = false, //Esta abierto para cualquiera, si es algo cerrado deberia poner el ip de donde pueden acceder
+                    ValidateIssuer = false //Valida quien dio el token
+                };
+            });
+
+
             //Agrego el servicio del generador de token para jwt
             //Haciendo esta inyection de servicios webapi para poder ingresar a los servicios del generador de token.
             services.AddScoped<IJwtGenerador, JwtGenerador>();
@@ -72,6 +90,8 @@ namespace WebAPI
 
             //Esto habilitarlo al deployar en un hosting con https. Para local o pruebas mantener comentado.
             //app.UseHttpsRedirection(); 
+
+            app.UseAuthentication(); //Luego a los controles agregar el Authorize decorator.
 
             app.UseRouting();
 

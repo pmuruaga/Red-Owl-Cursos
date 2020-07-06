@@ -1,0 +1,16 @@
+C:\Users\pmuru\source\repos\RedOwlCursos\ProyectoCore\Seguridad\bin\Debug\netcoreapp3.1\Seguridad.deps.json
+C:\Users\pmuru\source\repos\RedOwlCursos\ProyectoCore\Seguridad\bin\Debug\netcoreapp3.1\Seguridad.dll
+C:\Users\pmuru\source\repos\RedOwlCursos\ProyectoCore\Seguridad\bin\Debug\netcoreapp3.1\Aplicacion.dll
+C:\Users\pmuru\source\repos\RedOwlCursos\ProyectoCore\Seguridad\bin\Debug\netcoreapp3.1\Dominio.dll
+C:\Users\pmuru\source\repos\RedOwlCursos\ProyectoCore\Seguridad\bin\Debug\netcoreapp3.1\Persistencia.dll
+C:\Users\pmuru\source\repos\RedOwlCursos\ProyectoCore\Seguridad\bin\Debug\netcoreapp3.1\Aplicacion.pdb
+C:\Users\pmuru\source\repos\RedOwlCursos\ProyectoCore\Seguridad\bin\Debug\netcoreapp3.1\Dominio.pdb
+C:\Users\pmuru\source\repos\RedOwlCursos\ProyectoCore\Seguridad\bin\Debug\netcoreapp3.1\Persistencia.pdb
+C:\Users\pmuru\source\repos\RedOwlCursos\ProyectoCore\Seguridad\obj\Debug\netcoreapp3.1\Seguridad.csprojAssemblyReference.cache
+C:\Users\pmuru\source\repos\RedOwlCursos\ProyectoCore\Seguridad\obj\Debug\netcoreapp3.1\Seguridad.AssemblyInfoInputs.cache
+C:\Users\pmuru\source\repos\RedOwlCursos\ProyectoCore\Seguridad\obj\Debug\netcoreapp3.1\Seguridad.AssemblyInfo.cs
+C:\Users\pmuru\source\repos\RedOwlCursos\ProyectoCore\Seguridad\obj\Debug\netcoreapp3.1\Seguridad.csproj.CopyComplete
+C:\Users\pmuru\source\repos\RedOwlCursos\ProyectoCore\Seguridad\bin\Debug\netcoreapp3.1\Seguridad.pdb
+C:\Users\pmuru\source\repos\RedOwlCursos\ProyectoCore\Seguridad\obj\Debug\netcoreapp3.1\Seguridad.csproj.CoreCompileInputs.cache
+C:\Users\pmuru\source\repos\RedOwlCursos\ProyectoCore\Seguridad\obj\Debug\netcoreapp3.1\Seguridad.dll
+C:\Users\pmuru\source\repos\RedOwlCursos\ProyectoCore\Seguridad\obj\Debug\netcoreapp3.1\Seguridad.pdb

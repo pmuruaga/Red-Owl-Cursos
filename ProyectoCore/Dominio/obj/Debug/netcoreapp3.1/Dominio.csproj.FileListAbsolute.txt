@@ -7,3 +7,12 @@ C:\Users\pmuru\source\repos\ProyectoCore\Dominio\obj\Debug\netcoreapp3.1\Dominio
 C:\Users\pmuru\source\repos\ProyectoCore\Dominio\obj\Debug\netcoreapp3.1\Dominio.dll
 C:\Users\pmuru\source\repos\ProyectoCore\Dominio\obj\Debug\netcoreapp3.1\Dominio.pdb
 C:\Users\pmuru\source\repos\ProyectoCore\Dominio\obj\Debug\netcoreapp3.1\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\pmuru\source\repos\RedOwlCursos\ProyectoCore\Dominio\bin\Debug\netcoreapp3.1\Dominio.deps.json
+C:\Users\pmuru\source\repos\RedOwlCursos\ProyectoCore\Dominio\bin\Debug\netcoreapp3.1\Dominio.dll
+C:\Users\pmuru\source\repos\RedOwlCursos\ProyectoCore\Dominio\bin\Debug\netcoreapp3.1\Dominio.pdb
+C:\Users\pmuru\source\repos\RedOwlCursos\ProyectoCore\Dominio\obj\Debug\netcoreapp3.1\Dominio.csprojAssemblyReference.cache
+C:\Users\pmuru\source\repos\RedOwlCursos\ProyectoCore\Dominio\obj\Debug\netcoreapp3.1\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\pmuru\source\repos\RedOwlCursos\ProyectoCore\Dominio\obj\Debug\netcoreapp3.1\Dominio.AssemblyInfoInputs.cache
+C:\Users\pmuru\source\repos\RedOwlCursos\ProyectoCore\Dominio\obj\Debug\netcoreapp3.1\Dominio.AssemblyInfo.cs
+C:\Users\pmuru\source\repos\RedOwlCursos\ProyectoCore\Dominio\obj\Debug\netcoreapp3.1\Dominio.dll
+C:\Users\pmuru\source\repos\RedOwlCursos\ProyectoCore\Dominio\obj\Debug\netcoreapp3.1\Dominio.pdb
