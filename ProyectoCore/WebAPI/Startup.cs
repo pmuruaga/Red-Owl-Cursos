@@ -25,6 +25,8 @@ using Seguridad.TokenSeguridad;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc.Authorization;
 
 namespace WebAPI
 {
@@ -47,7 +49,12 @@ namespace WebAPI
             services.AddMediatR(typeof(Consulta.Manejador).Assembly);
 
             //Agrego el AddFluentValidation y el using de la libreria para las validaciones.
-            services.AddControllers().AddFluentValidation( cfg => cfg.RegisterValidatorsFromAssemblyContaining<Nuevo>());
+            //Luego al addController le paso las politicas para filtrar y chequear que se acceda con token, con authorizacion.
+            services.AddControllers( opt => {
+                    var policy = new AuthorizationPolicyBuilder().RequireAuthenticatedUser().Build();
+                    opt.Filters.Add(new AuthorizeFilter(policy));
+                })
+                .AddFluentValidation( cfg => cfg.RegisterValidatorsFromAssemblyContaining<Nuevo>());
 
             //Agrego un builder y un identityBuilder y le asigno un store... 
             var builder = services.AddIdentityCore<Usuario>();
