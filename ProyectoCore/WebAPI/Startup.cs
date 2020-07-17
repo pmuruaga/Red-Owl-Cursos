@@ -84,6 +84,9 @@ namespace WebAPI
             //Agrego el servicio del generador de token para jwt
             //Haciendo esta inyection de servicios webapi para poder ingresar a los servicios del generador de token.
             services.AddScoped<IJwtGenerador, JwtGenerador>();
+
+            //Agrego el servicio que me devuelve el usuario actual.
+            services.AddScoped<IUsuarioSesion, UsuarioSesion>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
