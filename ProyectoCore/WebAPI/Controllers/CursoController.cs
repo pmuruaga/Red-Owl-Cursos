@@ -16,7 +16,7 @@ namespace WebAPI.Controllers
 
         [HttpGet]
         //[Authorize] Quito el authorize, lo pondré a nivel de Startup.cs a nivel de controllers genericos.
-        public async Task<ActionResult<List<Curso>>> Get(){
+        public async Task<ActionResult<List<CursoDto>>> Get(){
             return await Mediator.Send(new Consulta.ListaCursos());
         }
 
