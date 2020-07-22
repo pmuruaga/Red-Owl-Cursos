@@ -5,30 +5,43 @@ using System.Threading;
 using System.Threading.Tasks;
 using Aplicacion.ManejadorError;
 using System.Net;
+using System;
+using AutoMapper;
+using System.Security.Cryptography.X509Certificates;
+using Microsoft.EntityFrameworkCore;
 
 namespace Aplicacion.Cursos
 {
     public class ConsultaId
     {
-        public class CursoUnico : IRequest<Curso>{
-            public int Id { get; set; }
+        public class CursoUnico : IRequest<CursoDto>{
+            public Guid Id { get; set; }
         }
 
-        public class Manejador: IRequestHandler<CursoUnico,Curso>{
+        public class Manejador: IRequestHandler<CursoUnico,CursoDto>{
             private readonly CursosOnlineContext _context;
+            private readonly IMapper _mapper;
             
-            public Manejador(CursosOnlineContext context)
+            public Manejador(CursosOnlineContext context, IMapper mapper)
             {
                 _context = context;
+                _mapper = mapper;
             }
-            public async Task<Curso> Handle(CursoUnico request, CancellationToken cancellationToken)
+            public async Task<CursoDto> Handle(CursoUnico request, CancellationToken cancellationToken)
             {
-                var curso = await _context.Curso.FindAsync(request.Id);
+                var curso = await _context.Curso
+                    .Include(x => x.InstructorLink)
+                    .ThenInclude(y => y.Instructor)
+                    .FirstOrDefaultAsync(a => a.CursoId == request.Id);
+
                 if (curso == null)
                 {                    
                     throw new ManejadorExcepcion(HttpStatusCode.NotFound, new { mensaje = "No se encontro el curso" });
                 }
-                return curso;
+
+                var cursoDto = _mapper.Map<Curso, CursoDto>(curso);
+
+                return cursoDto;
             }
         }
     }
