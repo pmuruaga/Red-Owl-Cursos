@@ -8,13 +8,14 @@ using System.Threading;
 using System;
 using Aplicacion.ManejadorError;
 using System.Net;
+using System.Linq;
 
 namespace Aplicacion.Cursos
 {
     public class Eliminar
     {
         public class Ejecuta : IRequest {
-            public int Id{ get; set; }
+            public Guid Id{ get; set; }
         }   
 
         public class Manejador : IRequestHandler<Ejecuta>{
@@ -25,6 +26,13 @@ namespace Aplicacion.Cursos
             }
             public async Task<Unit> Handle(Ejecuta request, CancellationToken cancellationToken)
             {
+                //Elimino los cursoInstructor que tengo relacionados a este curso antes de borrar el curso.
+                var cursoInstructores = _context.CursoInstructor.Where(x => x.CursoId == request.Id);
+                foreach(var instructor in cursoInstructores)
+                {
+                    _context.CursoInstructor.Remove(instructor);
+                }
+
                 var curso = await _context.Curso.FindAsync(request.Id);
                 if(curso == null){
                     //throw new Exception("El curso no existe");
