@@ -22,6 +22,9 @@ namespace Aplicacion.Cursos
             public DateTime? FechaPublicacion { get; set; }
 
             public List<Guid> ListaInstructor { get; set; }
+
+            public decimal? Precio { get; set; }
+            public decimal? PrecioPromocion { get; set; }
         }        
 
         public class EjecutaValidacion : AbstractValidator<Ejecuta>{
@@ -52,6 +55,24 @@ namespace Aplicacion.Cursos
                 curso.Titulo = request.Titulo ?? curso.Titulo;
                 curso.Descripcion = request.Descripcion ?? curso.Descripcion;
                 curso.FechaPublicacion = request.FechaPublicacion ?? curso.FechaPublicacion;
+
+                var precioEntidad = _context.Precio.Where(x => x.CursoId == curso.CursoId).FirstOrDefault();
+                if(precioEntidad != null)
+                {
+                    precioEntidad.PrecioActual = request.Precio ?? precioEntidad.PrecioActual;
+                    precioEntidad.Promocion = request.PrecioPromocion ?? precioEntidad.Promocion;
+                }
+                else
+                {
+                    precioEntidad = new Precio
+                    {
+                        CursoId = curso.CursoId,
+                        PrecioActual = request.Precio ?? 0,
+                        Promocion = request.PrecioPromocion ?? 0,
+                        PrecioId = Guid.NewGuid()
+                    };
+                    await _context.Precio.AddAsync(precioEntidad);
+                }
 
                 if (request.ListaInstructor != null)
                 {

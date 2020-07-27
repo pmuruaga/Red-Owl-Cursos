@@ -20,6 +20,9 @@ namespace Aplicacion.Cursos
             public DateTime? FechaPublicacion { get; set; }
 
             public List<Guid> ListaInstructor { get; set; }
+
+            public decimal Precio { get; set; }
+            public decimal PrecioPromocion { get; set; }
         }        
 
         public class EjecutaValidacion : AbstractValidator<Ejecuta>{
@@ -63,6 +66,16 @@ namespace Aplicacion.Cursos
                         _context.CursoInstructor.Add(cursoInstructor);
                     }
                 }
+
+                //Logica para el precio
+                var precioEntidad = new Precio
+                {
+                    CursoId = _cursoId,
+                    PrecioActual = request.Precio,
+                    Promocion = request.PrecioPromocion,
+                    PrecioId = Guid.NewGuid()
+                };
+                _context.Precio.Add(precioEntidad);
 
                 var valor = await _context.SaveChangesAsync(); //Si es 0 no se inserto, hubo error. Si es 1 grabo 1...
 
