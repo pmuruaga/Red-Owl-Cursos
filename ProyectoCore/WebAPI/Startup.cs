@@ -28,6 +28,8 @@ using System.Text;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.Authorization;
 using AutoMapper;
+using Persistencia.DapperConexion;
+using Persistencia.DapperConexion.Instructor;
 
 namespace WebAPI
 {
@@ -43,9 +45,14 @@ namespace WebAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            //This is for EFCore
             services.AddDbContext<CursosOnlineContext>(opt => {
                 opt.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
             });
+
+            //This is for Dapper. Adding connection for dapper.
+            services.AddOptions();
+            services.Configure<ConexionConfiguracion>(Configuration.GetSection("ConnectionStrings"));
 
             services.AddMediatR(typeof(Consulta.Manejador).Assembly);
 
@@ -90,6 +97,9 @@ namespace WebAPI
             services.AddScoped<IUsuarioSesion, UsuarioSesion>();
 
             services.AddAutoMapper(typeof(Consulta.Manejador));
+
+            services.AddTransient<IFactoryConnection, FactoryConnection>();
+            services.AddScoped<IInstructor, InstructorRepositorio>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

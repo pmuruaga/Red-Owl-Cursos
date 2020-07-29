@@ -1,0 +1,12 @@
+﻿CREATE PROCEDURE usp_Obtener_Instructores
+AS
+	BEGIN
+
+		SELECT 
+			X.InstructorId,
+			X.Nombre,
+			X.Apellido as Apellidos,
+			X.Grado
+		FROM Instructor X
+
+	END
