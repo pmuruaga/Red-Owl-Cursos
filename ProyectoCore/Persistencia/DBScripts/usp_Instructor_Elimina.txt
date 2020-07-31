@@ -1,0 +1,8 @@
+﻿CREATE PROCEDURE usp_Instructor_Elimina(
+	@InstructorId uniqueidentifier
+)
+AS
+	BEGIN
+		DELETE FROM CursoInstructor WHERE InstructorId = @InstructorId
+		DELETE FROM Instructor WHERE InstructorId = @InstructorId
+	END

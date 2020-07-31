@@ -1,0 +1,16 @@
+﻿CREATE PROCEDURE usp_Instructor_Editar(
+	@InstructorId uniqueidentifier,
+	@Nombre varchar(500),
+	@Apellidos varchar(500),
+	@Grado varchar(100)
+)
+AS
+	BEGIN
+		UPDATE Instructor
+		SET
+			Nombre = @Nombre,
+			Apellido = @Apellidos,
+			Grado = @Grado
+		WHERE
+			InstructorId = @InstructorId
+	END

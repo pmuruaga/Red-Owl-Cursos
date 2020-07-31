@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -14,19 +15,77 @@ namespace Persistencia.DapperConexion.Instructor
         {
             _factoryConnection = factoryConnection;
         }
-        public Task<int> Actualiza(InstructorModel parametros)
+        public async Task<int> Actualiza(Guid instructorId, string nombre, string apellidos, string grado)
         {
-            throw new NotImplementedException();
+            var storeProcedure = "usp_Instructor_Editar";
+            try
+            {
+                var connection = _factoryConnection.GetConnection();
+                var resultado = await connection.ExecuteAsync(
+                        storeProcedure,
+                        new
+                        {
+                            InstructorId = instructorId,
+                            Nombre = nombre,
+                            Apellidos = apellidos,
+                            Grado = grado
+                        },
+                        commandType: CommandType.StoredProcedure
+                    );
+                _factoryConnection.CloseConnection();
+                return resultado;
+            }
+            catch (Exception e)
+            {
+                throw new Exception("No se pudo crear el nuevo instructor", e);
+            }
         }
 
-        public Task<int> Elimina(Guid id)
+        public async Task<int> Elimina(Guid id)
         {
-            throw new NotImplementedException();
+            var storeProcedure = "usp_Instructor_Elimina";
+            try
+            {
+                var connection = _factoryConnection.GetConnection();
+                var resultado = await connection.ExecuteAsync(
+                        storeProcedure,
+                        new
+                        {
+                            InstructorId = id
+                        },
+                        commandType: CommandType.StoredProcedure
+                    );
+                _factoryConnection.CloseConnection();
+                return resultado;
+            }
+            catch (Exception e)
+            {
+                throw new Exception("No se pudo eliminar el instructor", e);
+            }
         }
 
-        public Task<int> Nuevo(InstructorModel parametros)
+        public async Task<int> Nuevo(string nombre, string apellidos, string grado)
         {
-            throw new NotImplementedException();
+            var storeProcedure = "usp_Instructor_Nuevo";            
+            try {
+                var connection = _factoryConnection.GetConnection();
+                var resultado = await connection.ExecuteAsync(
+                        storeProcedure,
+                        new
+                        {
+                            InstructorId = Guid.NewGuid(),
+                            Nombre = nombre,
+                            Apellidos = apellidos,
+                            Grado = grado
+                        },
+                        commandType: CommandType.StoredProcedure
+                    );
+                _factoryConnection.CloseConnection();
+                return resultado;
+            }
+            catch(Exception e) {
+                throw new Exception("No se pudo crear el nuevo instructor", e);
+            }            
         }
 
         public async Task<IEnumerable<InstructorModel>> ObtenerLista()
@@ -46,9 +105,28 @@ namespace Persistencia.DapperConexion.Instructor
             return instructorList;
         }
 
-        public Task<InstructorModel> ObtenerPorId(Guid id)
+        public async Task<InstructorModel> ObtenerPorId(Guid id)
         {
-            throw new NotImplementedException();
+            var storeProcedure = "usp_Instructor_Obtener_Por_Id";
+            InstructorModel instructor = null;
+            try
+            {
+                var connection = _factoryConnection.GetConnection();
+                instructor = await connection.QueryFirstAsync<InstructorModel>(
+                        storeProcedure,
+                        new
+                        {
+                            InstructorId = id
+                        },
+                        commandType: CommandType.StoredProcedure
+                    );
+                _factoryConnection.CloseConnection();
+                return instructor;
+            }
+            catch (Exception e)
+            {
+                throw new Exception("No se pudo encontrar el instructor", e);
+            }
         }
     }
 }

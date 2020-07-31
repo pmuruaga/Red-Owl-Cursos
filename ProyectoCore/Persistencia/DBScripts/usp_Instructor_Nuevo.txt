@@ -1,0 +1,11 @@
+﻿CREATE PROCEDURE usp_Instructor_Nuevo(
+	@InstructorId uniqueidentifier,
+	@Nombre varchar(500),
+	@Apellidos varchar(500),
+	@Grado varchar(100)
+)
+AS
+	BEGIN
+		INSERT INTO Instructor(InstructorId, Nombre, Apellido, Grado)
+		VALUES (@InstructorId, @Nombre, @Apellidos, @Grado)
+	END
