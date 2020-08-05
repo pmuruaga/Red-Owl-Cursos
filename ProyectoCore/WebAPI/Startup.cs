@@ -30,6 +30,8 @@ using Microsoft.AspNetCore.Mvc.Authorization;
 using AutoMapper;
 using Persistencia.DapperConexion;
 using Persistencia.DapperConexion.Instructor;
+using System.Reflection;
+using Microsoft.OpenApi.Models;
 
 namespace WebAPI
 {
@@ -100,6 +102,17 @@ namespace WebAPI
 
             services.AddTransient<IFactoryConnection, FactoryConnection>();
             services.AddScoped<IInstructor, InstructorRepositorio>();
+
+            //Agregado para incluir swagger
+            services.AddSwaggerGen(c => {
+                c.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Title = "Services para mantenimiento de cursos",
+                    Version = "v1"
+                });
+                //Le indico que tome todo el nombre de las clases (con namespace), sino me va dar error porque tengo en aplicación varios similares-> Nuevo.Ejecuta por ejem.
+                c.CustomSchemaIds( x => x.FullName);
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -119,6 +132,12 @@ namespace WebAPI
             app.UseRouting();
 
             app.UseAuthorization();
+
+            //Agrego para swagger
+            app.UseSwagger();
+            app.UseSwaggerUI(c => {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Cursos Online V1");
+            });
 
             app.UseEndpoints(endpoints =>
             {
