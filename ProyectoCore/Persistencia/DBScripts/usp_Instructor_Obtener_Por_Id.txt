@@ -7,7 +7,8 @@ AS
 			i.InstructorId,
 			i.Nombre,
 			i.Apellido as Apellidos,
-			i.Grado
+			i.Grado,
+			i.FechaCreacion
 		FROM Instructor i
 		WHERE InstructorId = @InstructorId		
 	END

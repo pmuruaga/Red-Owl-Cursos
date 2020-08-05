@@ -6,6 +6,6 @@
 )
 AS
 	BEGIN
-		INSERT INTO Instructor(InstructorId, Nombre, Apellido, Grado)
-		VALUES (@InstructorId, @Nombre, @Apellidos, @Grado)
+		INSERT INTO Instructor(InstructorId, Nombre, Apellido, Grado, FechaCreacion)
+		VALUES (@InstructorId, @Nombre, @Apellidos, @Grado, GETUTCDATE())
 	END

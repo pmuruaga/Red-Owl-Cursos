@@ -6,7 +6,8 @@ AS
 			X.InstructorId,
 			X.Nombre,
 			X.Apellido as Apellidos,
-			X.Grado
+			X.Grado,
+			X.FechaCreacion
 		FROM Instructor X
 
 	END
