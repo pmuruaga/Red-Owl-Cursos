@@ -1,0 +1,87 @@
+﻿CREATE PROCEDURE usp_obtener_cursos_paginados(
+	@NombreCurso nvarchar(500),
+	@Ordenamiento nvarchar(500),
+	@NumeroPagina int,
+	@CantidadElementos int,
+	@TotalRecords int OUTPUT,
+	@TotalPaginas int OUTPUT
+)
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+	SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
+
+	DECLARE @Inicio int
+	DECLARE @Fin int
+	
+	IF @NumeroPagina = 1
+		BEGIN
+			SET @Inicio = (@NumeroPagina * @CantidadElementos) - @CantidadElementos
+			SET @Fin = @NumeroPagina * @CantidadElementos 
+		END
+	ELSE	
+		BEGIN
+			SET @Inicio = ((@NumeroPagina * @CantidadElementos) - @CantidadElementos) + 1
+			SET @Fin = @NumeroPagina * @CantidadElementos
+		END
+
+	CREATE TABLE #TMP(
+		rowNumber int IDENTITY(1,1),
+		ID uniqueidentifier
+	)
+
+	DECLARE @SQL nvarchar(max)
+	SET @SQL = 'SELECT CursoId FROM Curso'
+
+	IF @NombreCurso IS NOT NULL
+		BEGIN
+			SET @SQL = @SQL + ' WHERE Titulo LIKE ''%' + @NombreCurso + '%'' '
+		END
+
+	IF @Ordenamiento IS NOT NULL
+		BEGIN
+			SET @SQL = @SQL + ' ORDER BY ' + @Ordenamiento 
+		END
+
+
+    -- Insert statements for procedure here	
+	-- La consulta generada sería algo así:
+	-- SELECT CursoId FROM Curso WHERE Titulo LIKE '%ASP%' ORDER BY Titulo
+
+	INSERT INTO #TMP (ID)
+	EXEC sp_executesql @SQL
+
+	SELECT @TotalRecords = Count(*) FROM #TMP
+
+	IF @TotalRecords > @CantidadElementos
+		BEGIN
+			SET @TotalPaginas = @TotalRecords / @CantidadElementos
+			IF (@TotalRecords %  @CantidadElementos) > 0
+				BEGIN 
+					SET @TotalPaginas = @TotalPaginas + 1
+				END
+		END
+	ELSE
+		BEGIN
+			SET @TotalPaginas = 1
+		END
+
+
+	SELECT 
+		c.CursoId,
+		c.Descripcion,
+		c.Titulo,
+		c.FechaCreacion,
+		c.FechaPublicacion,
+		c.FotoPortada,
+		p.PrecioActual,
+		p.Promocion
+	FROM #TMP t INNER JOIN dbo.Curso c
+					ON t.ID = c.CursoId
+				LEFT JOIN dbo.Precio p
+					ON c.CursoId = p.CursoId
+	WHERE t.rowNumber >= @Inicio AND t.rowNumber <= @Fin
+END
+GO
