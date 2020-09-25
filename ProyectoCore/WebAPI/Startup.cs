@@ -70,6 +70,11 @@ namespace WebAPI
             //Agrego un builder y un identityBuilder y le asigno un store... 
             var builder = services.AddIdentityCore<Usuario>();
             var identityBuilder = new IdentityBuilder(builder.UserType, builder.Services);
+
+            //Agrego la siguiente linea para manejar el tema de roles. Instancio el servicio de RoleManager.
+            identityBuilder.AddRoles<IdentityRole>();
+            identityBuilder.AddClaimsPrincipalFactory<UserClaimsPrincipalFactory<Usuario, IdentityRole>>();
+            
             identityBuilder.AddEntityFrameworkStores<CursosOnlineContext>();
             //Le indico que quien va manejar el login va ser coreIdentity
             identityBuilder.AddSignInManager<SignInManager<Usuario>>();
@@ -144,7 +149,7 @@ namespace WebAPI
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
-            });
+            });            
         }
     }
 }
