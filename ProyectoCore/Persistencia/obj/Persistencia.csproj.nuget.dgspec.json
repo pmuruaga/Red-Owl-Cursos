@@ -1,21 +1,18 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\pmuru\\source\\repos\\RedOwlCursos\\ProyectoCore\\Persistencia\\Persistencia.csproj": {}
+    "C:\\Archivos\\Desarrollo\\repos\\RedOwlCursos\\ProyectoCore\\Persistencia\\Persistencia.csproj": {}
   },
   "projects": {
-    "C:\\Users\\pmuru\\source\\repos\\RedOwlCursos\\ProyectoCore\\Dominio\\Dominio.csproj": {
+    "C:\\Archivos\\Desarrollo\\repos\\RedOwlCursos\\ProyectoCore\\Dominio\\Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pmuru\\source\\repos\\RedOwlCursos\\ProyectoCore\\Dominio\\Dominio.csproj",
+        "projectUniqueName": "C:\\Archivos\\Desarrollo\\repos\\RedOwlCursos\\ProyectoCore\\Dominio\\Dominio.csproj",
         "projectName": "Dominio",
-        "projectPath": "C:\\Users\\pmuru\\source\\repos\\RedOwlCursos\\ProyectoCore\\Dominio\\Dominio.csproj",
+        "projectPath": "C:\\Archivos\\Desarrollo\\repos\\RedOwlCursos\\ProyectoCore\\Dominio\\Dominio.csproj",
         "packagesPath": "C:\\Users\\pmuru\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pmuru\\source\\repos\\RedOwlCursos\\ProyectoCore\\Dominio\\obj\\",
+        "outputPath": "C:\\Archivos\\Desarrollo\\repos\\RedOwlCursos\\ProyectoCore\\Dominio\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
           "C:\\Users\\pmuru\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -29,6 +26,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -40,6 +38,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
@@ -64,22 +63,19 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\pmuru\\source\\repos\\RedOwlCursos\\ProyectoCore\\Persistencia\\Persistencia.csproj": {
+    "C:\\Archivos\\Desarrollo\\repos\\RedOwlCursos\\ProyectoCore\\Persistencia\\Persistencia.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pmuru\\source\\repos\\RedOwlCursos\\ProyectoCore\\Persistencia\\Persistencia.csproj",
+        "projectUniqueName": "C:\\Archivos\\Desarrollo\\repos\\RedOwlCursos\\ProyectoCore\\Persistencia\\Persistencia.csproj",
         "projectName": "Persistencia",
-        "projectPath": "C:\\Users\\pmuru\\source\\repos\\RedOwlCursos\\ProyectoCore\\Persistencia\\Persistencia.csproj",
+        "projectPath": "C:\\Archivos\\Desarrollo\\repos\\RedOwlCursos\\ProyectoCore\\Persistencia\\Persistencia.csproj",
         "packagesPath": "C:\\Users\\pmuru\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pmuru\\source\\repos\\RedOwlCursos\\ProyectoCore\\Persistencia\\obj\\",
+        "outputPath": "C:\\Archivos\\Desarrollo\\repos\\RedOwlCursos\\ProyectoCore\\Persistencia\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
           "C:\\Users\\pmuru\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -93,9 +89,10 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\pmuru\\source\\repos\\RedOwlCursos\\ProyectoCore\\Dominio\\Dominio.csproj": {
-                "projectPath": "C:\\Users\\pmuru\\source\\repos\\RedOwlCursos\\ProyectoCore\\Dominio\\Dominio.csproj"
+              "C:\\Archivos\\Desarrollo\\repos\\RedOwlCursos\\ProyectoCore\\Dominio\\Dominio.csproj": {
+                "projectPath": "C:\\Archivos\\Desarrollo\\repos\\RedOwlCursos\\ProyectoCore\\Dominio\\Dominio.csproj"
               }
             }
           }
@@ -108,6 +105,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Dapper": {
               "target": "Package",
@@ -150,7 +148,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

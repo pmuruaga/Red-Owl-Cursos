@@ -5903,21 +5903,17 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\pmuru\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\pmuru\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pmuru\\source\\repos\\RedOwlCursos\\ProyectoCore\\WebAPI\\WebAPI.csproj",
+      "projectUniqueName": "C:\\Archivos\\Desarrollo\\repos\\RedOwlCursos\\ProyectoCore\\WebAPI\\WebAPI.csproj",
       "projectName": "WebAPI",
-      "projectPath": "C:\\Users\\pmuru\\source\\repos\\RedOwlCursos\\ProyectoCore\\WebAPI\\WebAPI.csproj",
+      "projectPath": "C:\\Archivos\\Desarrollo\\repos\\RedOwlCursos\\ProyectoCore\\WebAPI\\WebAPI.csproj",
       "packagesPath": "C:\\Users\\pmuru\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pmuru\\source\\repos\\RedOwlCursos\\ProyectoCore\\WebAPI\\obj\\",
+      "outputPath": "C:\\Archivos\\Desarrollo\\repos\\RedOwlCursos\\ProyectoCore\\WebAPI\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
         "C:\\Users\\pmuru\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -5931,12 +5927,13 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\pmuru\\source\\repos\\RedOwlCursos\\ProyectoCore\\Aplicacion\\Aplicacion.csproj": {
-              "projectPath": "C:\\Users\\pmuru\\source\\repos\\RedOwlCursos\\ProyectoCore\\Aplicacion\\Aplicacion.csproj"
+            "C:\\Archivos\\Desarrollo\\repos\\RedOwlCursos\\ProyectoCore\\Aplicacion\\Aplicacion.csproj": {
+              "projectPath": "C:\\Archivos\\Desarrollo\\repos\\RedOwlCursos\\ProyectoCore\\Aplicacion\\Aplicacion.csproj"
             },
-            "C:\\Users\\pmuru\\source\\repos\\RedOwlCursos\\ProyectoCore\\Seguridad\\Seguridad.csproj": {
-              "projectPath": "C:\\Users\\pmuru\\source\\repos\\RedOwlCursos\\ProyectoCore\\Seguridad\\Seguridad.csproj"
+            "C:\\Archivos\\Desarrollo\\repos\\RedOwlCursos\\ProyectoCore\\Seguridad\\Seguridad.csproj": {
+              "projectPath": "C:\\Archivos\\Desarrollo\\repos\\RedOwlCursos\\ProyectoCore\\Seguridad\\Seguridad.csproj"
             }
           }
         }
@@ -5949,6 +5946,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "Microsoft.AspNetCore.Authentication.JwtBearer": {
             "target": "Package",
@@ -5985,7 +5983,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }
