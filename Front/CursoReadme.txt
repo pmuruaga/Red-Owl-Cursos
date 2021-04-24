@@ -34,3 +34,24 @@ Creo un request generico con los metodos que voy a usar, sin el then... el then 
 Luego paso a crear Actions que van a ser funciones globales que haran llamadas usando la libreria axios.
 
 Finalmente uso ese action en el componente haciendo la llamada al action que va a invocar el request de axios.
+
+
+Instalo react-router-dom, es una libreria que sirve para navegar, para cargar en el app el js que necesite renderizar.
+-npm install react-router-dom
+
+Agrego la etiqueta router en el app.js
+
+Podes usar el generador de código de VSCode escribiendo rsc y tab y te crea un archivo con estructura react.
+
+Agrego una carpeta contexto donde voy a crear los archivos para manejar las variables globales de estado de Context API.
+No se necesitan instalar otras librerias para trabajar con Context API, directamente viene en React.
+En el store defino el stateProvider que es donde voy a definir quinenes van a ser los subscriptos a mi contexto. (Tengo proveedores y consumidores)
+
+El papel de un reducer es acceder a las variables de sesión y cambiar su data.
+
+
+"Password":"Password12345$",
+"Email":"pmuruaga2@gmail.com"
+
+token_seguridad
+Bearer
