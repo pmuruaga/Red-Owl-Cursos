@@ -40,8 +40,25 @@ const PerfilUsuario = () => {
     const guardarUsuario = e => {
         e.preventDefault();
         actualizarUsuario(usuario).then(response => {
-            console.log('se actualizo el usuario', usuario)
-            window.localStorage.setItem("token_seguridad", response.data.token);
+            if(response.status === 200){
+                //Verifico que el status sea 200, que todo salio bien, entonces disparo invocando al reducer, un OpenSnackbar con el payload openMensaje con los datos.
+                dispatch({
+                    type : "OPEN_SNACKBAR",
+                    openMensaje: {
+                        open : true,
+                        mensaje : "Se guardaron exitosamente los cambios en Perfil Usuario"
+                    }
+                })
+                window.localStorage.setItem("token_seguridad", response.data.token);
+            }else{
+                dispatch({
+                    type: "OPEN_SNACKBAR",
+                    openMensaje: {
+                        open: true,
+                        mensaje: "Errores al intentar guardar en: " + Object.keys(response.data.errors)
+                    }
+                })
+            }            
         })
     }
 
